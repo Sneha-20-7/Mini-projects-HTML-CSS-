@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .element {
+                height: 250px;
+                width: 250px;
+                background-color: red;
+                animation: stretch 1.5s ease-out infinite;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid blue;
+            }
+            .box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 2px solid crimson;
+                overflow: hidden;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @keyframes stretch {
+                0% {
+                    transform: scale(.3);
+                    background-color: red;
+                    border-radius: 100%;
+                }
+                50% {
+                    background-color: orange;
+                }
+                100% {
+                    transform: scale(1.5);
+                    background-color: yellow;
+                }
+            }
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="element">
+            <div class="box">
+                <img src="https://fps.cdnpk.net/home/cover/image-12-sm.webp?w=438&h=438" alt="Rounded Image">
+            </div>
+        </div>
+    </body>
+    </html>
+    

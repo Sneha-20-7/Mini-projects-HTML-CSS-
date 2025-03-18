@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.855);
+         }
+         .card{
+            width: 300px;
+            height: 360px;
+            background-color: #030029;
+            position: relative;
+            border-radius: 8px;
+            display: grid;
+            padding: 50px;
+            place-items: center;
+            overflow: hidden;
+         }
+         .card h2{
+            font-family: system-ui;
+            font-size: 2rem;
+            color: rgb(221, 255, 0);
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            z-index: 2;
+         }
+         .card::before{
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 140%;
+            background-image: linear-gradient(
+                180deg,
+                #363dff,
+                #384ff3
+            );
+            animation: rotate 5s linear infinite ;
+         }
+         .card::after{
+            content: "";
+            position: absolute;
+            inset: 8px;
+            background-color: #030029;
+            border-radius: inherit;
+         }
+         @keyframes rotate{
+            100%{
+                rotate:360deg;
+            }
+            
+         }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Border animation</h2>
+    </div>
+</body>
+</html>

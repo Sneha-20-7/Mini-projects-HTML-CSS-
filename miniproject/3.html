@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+         body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.855);
+    }
+        .div1 {
+            padding: 7px;
+            font-size: 1.4rem;
+            color: silver;
+        }
+        .loader {
+            border-radius: 4px;
+            border: 2px solid white;
+            position: relative;
+            height: 70px;
+            width: 300px;
+            background-color: aqua;
+            overflow: hidden;
+        }
+        .loader::before {
+            content: '';
+            display: block;
+            height: 100%;
+            background-color:blue;
+            animation: loading_11 10s linear infinite;
+        }
+        .loader::after {
+            content: '0%';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            color:white;
+            animation: percentage_11 10s linear infinite;
+        }
+        @keyframes loading_11 {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        @keyframes percentage_11 {
+            0% { content: '0%'; }
+            5% { content: '5%'; }
+            10% { content: '10%'; }
+            17% { content: '17%'; }
+            25% { content: '25%'; }
+            35% { content: '35%'; }
+            46% { content: '46%'; }
+            52% { content: '52%'; }
+            60% { content: '60%'; }
+            71% { content: '71%'; }
+            77% { content: '77%'; }
+            80% { content: '80%'; }
+            87% { content: '87%'; }
+            94% { content: '94%'; }
+            100% { content: '100%'; }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"><i class="fas fa-plug"></i></div>
+    <div class="loader"></div>
+</body>
+</html>
